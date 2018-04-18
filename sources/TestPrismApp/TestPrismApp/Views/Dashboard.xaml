@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:TestPrismApp.ViewModels;assembly=TestPrismApp"
+             mc:Ignorable="d"
+             x:Class="TestPrismApp.Views.Dashboard"
+             d:DataContext="{d:DesignInstance viewModels:DashboardViewModel}"
+             Title="{Binding Title}">
+    <ScrollView>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" HeightRequest="60">
+                <Label Text="Hardware ID:" WidthRequest="100" VerticalOptions="CenterAndExpand" />
+                <Entry Text="{Binding HardwareId}" IsEnabled="False" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" HeightRequest="60">
+                <Label Text="Device Name:" WidthRequest="100" VerticalOptions="CenterAndExpand" />
+                <Entry Text="{Binding DeviceName}" IsEnabled="False" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" HeightRequest="60">
+                <Label Text="Os Type:" WidthRequest="100" VerticalOptions="CenterAndExpand" />
+                <Entry Text="{Binding OsType}" IsEnabled="False" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" HeightRequest="60">
+                <Label Text="Os Version:" WidthRequest="100" VerticalOptions="CenterAndExpand" />
+                <Entry Text="{Binding OsVersion}" IsEnabled="False" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" HeightRequest="60">
+                <Label Text="App Version:" WidthRequest="100" VerticalOptions="CenterAndExpand" />
+                <Entry Text="{Binding AppVersion}" IsEnabled="False" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+  
+</ContentPage>
